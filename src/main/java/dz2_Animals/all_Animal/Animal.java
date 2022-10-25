@@ -1,41 +1,33 @@
-package dz2.animals;
+package dz2_Animals.all_Animal;
 
-/**
- * FileName: Animals
- * Author: aspid
- * Date: 13.08.2022 18:13
- * Description:
- */
-public abstract class Animal {              //запрет на создание абстрактного класса Animal  с помощью final!!
-                                        //созданы имя,цвет, возраст, вес
+public abstract class Animal {                      //запрет на создание абстрактного класса Animal
+                                                    //созданы имя,цвет, возраст, вес
     protected static String name;
     protected static int age;
     protected static int weight;
     protected static String color;
 
     public Animal(String name, int age, int weight, String color) {
-        Animal.name = name;                     //this.name = name;
+        Animal.name = name;                         //this.name = name - только статически
         Animal.age =  age;
         Animal.weight = weight;
         Animal.color = color;
     }
-
     public Animal() {
-
     }
 
-    //прописываем условие по года/года/лет в соотвествии с условем задачи до 100 лет))
+                                                    //прописываем условие по года/года/лет в соотвествии с условем задачи до 100 лет))
     public String getOld()
     {
         String old = " ";
-        boolean lastAge = (age % 100 >= 11) && (age % 100 <=14);
+        //boolean lastAge = (age % 100 >= 11) && (age % 100 <=14);
         if (age == 1) old = "год";
         else if (age == 0 || age >=5 && age <=9) old = "лет";
         else if (age >= 2 && age <= 4) old = "года";
         else old = "лет";
         return old;
     }
-                                    //созданы методы ем, пью, иду, говорю
+                                                     //созданы методы ем, пью, иду, говорю
     public void eat() {
         System.out.println("I am eating");
     }
@@ -49,10 +41,9 @@ public abstract class Animal {              //запрет на создание
     }
 
     public void say() { System.out.println("I am saying");
-        return;
     }
 
-        //созданы методы Gettery&Settery
+                                                      //созданы методы Gettery&Settery
     public String getName() {
         return name;
     }
@@ -61,7 +52,6 @@ public abstract class Animal {              //запрет на создание
         return age;
     }
 
-
     public int getWeight() {
         return weight;
     }
@@ -69,6 +59,8 @@ public abstract class Animal {              //запрет на создание
     public String getColor() {
         return color;
     }
+
+
 
 
 
@@ -88,24 +80,21 @@ public abstract class Animal {              //запрет на создание
         Animal.color = color;
     }
 
-                                    //переопределен метод toString
+    //переопределен метод toString
     @Override
     public String toString() {
-    return "Hi! my name is " + name + ", my age is - " + age + " " + getOld() + ", " + "my weight is - " + weight +" kg, " + "my color is - " + color;
+        return "Hi! my name is " + name + ", my age is - " + age + " " + getOld() + ", " + "my weight is - " + weight +" kg, " + "my color is - " + color;
     }
 
-                //переопределили equels/hash-code для сравнения
+    //переопределили equels/hash-code для сравнения
     @Override
     public boolean equals(Object obj) {
         return super.equals(obj);
     }
-                                     //переопределили hash-код для сравнения
+    //переопределили hash-код для сравнения
     @Override
     public int hashCode() {
         return super.hashCode();
     }
 
 }
-
-
-

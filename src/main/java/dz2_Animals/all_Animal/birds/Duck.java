@@ -1,17 +1,12 @@
-package dz2.animals.birds;
+package dz2_Animals.all_Animal.birds;
 
-import dz2.animals.Animal;
+import dz2_Animals.all_Animal.Animal;
 
-/**
- * FileName: Duck
- * Author: aspid
- * Date: 13.08.2022 18:14
- * Description:
- */
 public class Duck extends Animal implements Flying {
 
     public Duck(String name, int age, int weight, String color)
-            {super(name, age, weight, color);}
+    {super(name, age, weight, color);}
+
 
     public Duck() {
         super();
@@ -28,4 +23,3 @@ public class Duck extends Animal implements Flying {
         System.out.println();}
 
 }
-
