@@ -1,17 +1,17 @@
-package dz2_Animals.all_Animal;
+package homework2.animals;
 
 public abstract class Animal {                      //запрет на создание абстрактного класса Animal
                                                     //созданы имя,цвет, возраст, вес
-    protected static String name;
-    protected static int age;
-    protected static int weight;
-    protected static String color;
+    protected String name;
+    protected int age;
+    protected int weight;
+    protected String color;
 
     public Animal(String name, int age, int weight, String color) {
-        Animal.name = name;                         //this.name = name - только статически
-        Animal.age =  age;
-        Animal.weight = weight;
-        Animal.color = color;
+        this.name = name;                         
+        this.age =  age;
+        this.weight = weight;
+        this.color = color;
     }
     public Animal() {
     }
@@ -20,10 +20,14 @@ public abstract class Animal {                      //запрет на созд
     public String getOld()
     {
         String old = " ";
-        //boolean lastAge = (age % 100 >= 11) && (age % 100 <=14);
-        if (age == 1) old = "год";
-        else if (age == 0 || age >=5 && age <=9) old = "лет";
-        else if (age >= 2 && age <= 4) old = "года";
+
+        int lastAge = age % 100;
+        if (lastAge >= 11 && age % 100 <=14) return "лет";
+        
+        int lastOld = age % 10; 
+        if (lastOld == 1) old = "год";
+        else if (lastOld == 0 || lastOld >=5 && lastOld <=9) old = "лет";
+        else if (lastOld >= 2 && lastOld <= 4) old = "года";
         else old = "лет";
         return old;
     }
@@ -65,19 +69,19 @@ public abstract class Animal {                      //запрет на созд
 
 
     public void setName(String name) {
-        Animal.name = name;
+        this.name = name;
     }
 
     public void setAge(int age) {
-        Animal.age = age;
+        this.age = age;
     }
 
     public void setWeight(int weight) {
-        Animal.weight = weight;
+        this.weight = weight;
     }
 
     public void setColor(String color) {
-        Animal.color = color;
+        this.color = color;
     }
 
     //переопределен метод toString
