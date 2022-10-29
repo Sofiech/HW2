@@ -1,11 +1,11 @@
-package dz2_Animals;
+package homework2;
 
-import dz2_Animals.all_Animal.Animal;
-import dz2_Animals.all_Animal.birds.Duck;
-import dz2_Animals.all_Animal.pet.Cat;
-import dz2_Animals.all_Animal.pet.Dog;
-import dz2_Animals.data.Command;
-import dz2_Animals.data.CommandAnimalType;
+import homework2.animals.Animal;
+import homework2.animals.birds.Duck;
+import homework2.animals.pet.Cat;
+import homework2.animals.pet.Dog;
+import homework2.data.Command;
+import homework2.data.CommandAnimalType;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
