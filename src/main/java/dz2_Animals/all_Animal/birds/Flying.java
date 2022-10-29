@@ -1,4 +1,4 @@
-package dz2_Animals.all_Animal.birds;
+package homework2.animals.birds;
 
 public interface Flying {
     void fly();
