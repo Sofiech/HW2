@@ -1,6 +1,6 @@
-package dz2_Animals.all_Animal.birds;
+package homework2.animals.birds;
 
-import dz2_Animals.all_Animal.Animal;
+import homework2.animals.Animal;
 
 public class Duck extends Animal implements Flying {
 
