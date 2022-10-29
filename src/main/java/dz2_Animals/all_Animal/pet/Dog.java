@@ -1,6 +1,6 @@
-package dz2_Animals.all_Animal.pet;
+package homework2.animals.pet;
 
-import dz2_Animals.all_Animal.Animal;
+import homework2.animals.Animal;
 
 public class Dog extends Animal {
 
